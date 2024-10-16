@@ -1,0 +1,72 @@
+*{
+    font-family: "Outfit";
+}
+
+
+body{
+    overflow: hidden;
+    background-color: black;
+}
+.con{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    margin-top: -5%;
+    width: 20%;
+    background:linear-gradient(to bottom,rgb(2, 23, 87),rgb(150, 237, 150));
+    height: 420px;
+    padding-left: 3%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease-in;
+    color: white;
+}
+.main:hover{
+    box-shadow: 5px -4px 20px gray;
+}
+input,select{
+    width: 60%;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    padding-left: 2%;
+    font-size: 16px;
+    margin: 1% 0% 2% 6%;
+}
+label{
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+h4{
+    width: 60%;
+    background-color: rgba(0,0,0,0.4);
+    height: 25px;
+    margin-top: 3%;
+    border-radius: 15px;
+    color: white;
+    padding-left: 4%;
+    padding-top: 1%;
+    font-weight: 200;
+    margin-left: 7%;
+
+}
+button{
+    width: 70%;
+    margin: -1% 0% 0% 5%;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    padding: 2%;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+}
+

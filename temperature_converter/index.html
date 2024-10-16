@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <link rel="icon" href="tmpr-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="con">
+        <div class="main">
+            
+                
+            <h2 style="margin-left: -6%;">Temperature Converter</h2>
+            <label for="">Select one :</label>
+            <select name="" id="values1">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahreinheit">Fahreinheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <label for="inp">Degrees:</label>
+            <input type="number" id="inp" >
+           
+           
+            <label for="">Type:</label>
+            <select name="" id="values">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahreinheit">Fahreinheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <label for="">Result:</label>
+            <h4 id="result"></h4>
+            <button type="submit" id="btn">convert</button>
+        </div>
+    </div>
+    <script>
+        input = document.getElementById("inp")
+        val = document.getElementById("values")
+        result = document.getElementById("result")
+        val1 = document.getElementById("values1")
+        btn.onclick = function(){
+            if( (val1.value=="Celsius") && (val.value=="Fahreinheit") ){
+                ans = (input.value*1.8)+32
+                result.innerHTML =  Number(ans).toFixed(3)
+            }
+            else if((val1.value=="Celsius") &&(val.value=="Kelvin")){
+                ans = Number(input.value)+273.15
+                result.innerHTML = Number(ans).toFixed(1)
+            }
+            else if((val1.value == "Celsius") &&(val.value == "Celsius")){
+                result.innerHTML = input.value
+            }
+            else if((val1.value=="Fahreinheit") && (val.value=="Celsius")){
+                ans = (input.value-32)*0.5555555
+                result.innerHTML =  Number(ans).toFixed(3)
+            }
+            else if((val1.value=="Fahreinheit")&& (val.value=="Fahreinheit")){
+                result.innerHTML = input.value
+            }
+            else if((val1.value=="Fahreinheit") && (val.value=="Kelvin")){
+                ans = (input.value-32)*0.55555+273.15
+                result.innerHTML =  Number(ans).toFixed(3)
+            }
+            else if((val1.value=="Kelvin") && (val.value=="Kelvin")){
+                result.innerHTML = input.value
+            } 
+            else if((val1.value=="Kelvin") && (val.value=="Celsius")){
+                ans = input.value-273.15
+                result.innerHTML = Number(ans).toFixed(3)
+            } 
+            else if((val1.value=="Kelvin") && (val.value=="Fahreinheit")){
+                ans = (input.value-273.15)*1.8+32
+                result.innerHTML = Number(ans).toFixed(3)
+            } 
+            
+            
+        }
+    </script>
+</body>
+</html>
